@@ -3,34 +3,33 @@ let data = [
         id: 'ukrainians',
         title: 'Ukrainians',
         text: 'Ukrainians, details',
-        img: 'img/ukrainians.png'
+        img: 'https://rukhlovka.github.io/study/js-dom/img/ukrainians.png'
     },
     {
         id: 'fox',
         title: 'Fox cosmonaut',
         text: 'portrait of a fox cosmonaut, space sky with stars on the background, highly detailed, digital painting, modern style',
-        img: 'img/fox-cosmonaut.png'
+        img: 'https://rukhlovka.github.io/study/js-dom/img/fox-cosmonaut.png'
     },
     {
         id: 'cow',
         title: 'Cow cosmonaut',
         text: 'portrait of a cow cosmonaut, space sky with stars on the background, highly detailed, digital painting',
-        img: 'img/cow-cosmonaut.png'
+        img: 'https://rukhlovka.github.io/study/js-dom/img/cow-cosmonaut.png'
     },
     {
         id: 'cyberpunk',
         title: 'Cyberpunk',
         text: 'cyberpunk style, man\'s portrait',
-        img: 'img/cyberpunk.png'
+        img: 'https://rukhlovka.github.io/study/js-dom/img/cyberpunk.png'
     },
     {
         id: 'apocalypse',
         title: 'Apocalypse',
         text: ' The city after the apocalypse',
-        img: 'img/apocalypse.png'
+        img: 'https://rukhlovka.github.io/study/js-dom/img/apocalypse.png'
     }
 ]
-let url = 'img/ukrainians.png';
 
 function takeData({ target }) {
 
@@ -47,14 +46,18 @@ function takeData({ target }) {
     document.querySelector(".main-img-this")
         .setAttribute('src', thisUrl);
 
+    document.querySelector(".main-img-this")
+        .setAttribute('alt', thisTitle);
+
     document.querySelector(".main-text-span")
-        .textContent = thisText;
+        .innerHTML = thisText;
 
     document.querySelector(".main-title")
-        .textContent = thisTitle;
+        .innerHTML = thisTitle;
     document.querySelector(".hidden")
         .setAttribute('class', 'keywords');
 };
+
 function more(event) {
 
     if (document.querySelector(".menu-ul").getAttribute('class') == 'menu-ul') {
@@ -65,6 +68,7 @@ function more(event) {
             .setAttribute('class', 'menu-ul');
     };
 };
+
 document.querySelector('.menu-ul')
     .addEventListener("click", takeData);
 

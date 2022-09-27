@@ -204,7 +204,7 @@ body {
 
 @media (max-width: 576px) {
     .more {
-        background-image: url("img/burger.png");
+        background-image: url("https://rukhlovka.github.io/study/js-dom/img/burger.png");
         background-color: #7cb0c6;
         position: absolute;
         background-repeat: no-repeat;
