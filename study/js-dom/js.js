@@ -65,9 +65,8 @@ function more(event) {
             .setAttribute('class', 'menu-ul');
     };
 };
-const navigation = document.querySelector('.menu-ul');
-
-navigation.addEventListener("click", takeData);
+document.querySelector('.menu-ul')
+    .addEventListener("click", takeData);
 
 document.querySelector('.more')
     .addEventListener("click", more);

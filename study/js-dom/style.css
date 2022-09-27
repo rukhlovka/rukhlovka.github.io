@@ -205,10 +205,14 @@ body {
 @media (max-width: 576px) {
     .more {
         background-image: url("img/burger.png");
+        background-color: #7cb0c6;
         position: absolute;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
         border: 0;
-        width: 55px;
-        height: 55px;
+        width: 44px;
+        height: 44px;
         display: block;
         visibility: visible;
         overflow-x: auto;
@@ -216,12 +220,44 @@ body {
         top: 0;
     }
 
+    .more:visited {
+        background-color: #7cb0c6;
+    }
+
+    .more:hover {
+        background-color: #6ebee0;
+    }
+
+    .more:active {
+        background-color: #4e8ba4;
+    }
+
+    .more:focus {
+        background-color: #49a3c9;
+    }
+
     .menu-ul {
         display: none;
     }
 
+    .menu li a {
+        font-size: 24px;
+    }
+
     .open {
         display: block;
+    }
+
+    .header {
+        font-size: 30px;
+    }
+
+    .main-text {
+        font-size: 22px;
+    }
+
+    .main-title {
+        font-size: 24px;
     }
 }
 
